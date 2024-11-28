@@ -31,7 +31,7 @@ namespace FileUtils {
      * @param hasHeader bool
      * @return std::vector<Dictionary<std::string>> 
      */
-    std::vector<Dictionary<std::string>> extractCSV(std::string &filename, bool hasHeader = true);
+    std::vector<Dictionary<std::string>> extractCSV(const std::string &filename, bool hasHeader = true);
 
     /**
      * @brief Splits a string based on the delimiter. Default is ","

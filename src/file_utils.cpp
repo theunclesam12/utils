@@ -11,7 +11,7 @@
 #include "../include/file_utils.hpp"
 
 
-std::vector<Dictionary<std::string>> FileUtils::extractCSV(std::string &filename, bool hasHeader)
+std::vector<Dictionary<std::string>> FileUtils::extractCSV(const std::string &filename, bool hasHeader)
 {
     std::ifstream file(filename);
 
@@ -95,27 +95,34 @@ void FileUtils::removeStrFromVec(std::vector<std::string>& vec, const std::strin
 
 // Uncomment the following for test code
 // int main() {
-//     std::string filename = "INSERTCSVFILENAME.csv";
-
-//     auto csv_data = FileUtils::extractCSV(filename, true);
-    
-//     auto key_list = csv_data[0].listKeys();
-
-//     // List all keys
-//     for (const auto& key : key_list)
+//     std::vector<std::string> files = {
+//         "insert_filename.csv",
+//         "insert_filename2.csv"
+//     };
+//     for (const auto& filename : files)
 //     {
-//         std::cout << key << " ";
-//     }
-//     std::cout << std::endl;
+//         std::cout << "\n\nProcessing the following file: " << filename << std::endl;
 
-//     // Print all keys
-//     for (const auto& row : csv_data)
-//     {
+//         auto csv_data = FileUtils::extractCSV(filename, true);
+        
+//         auto key_list = csv_data[0].listKeys();
+        
+//         // List all keys
 //         for (const auto& key : key_list)
 //         {
-//             std::cout << row.get(key) << " ";
+//             std::cout << key << " ";
 //         }
 //         std::cout << std::endl;
+
+//         // Print all keys
+//         for (const auto& row : csv_data)
+//         {
+//             for (const auto& key : key_list)
+//             {
+//                 std::cout << row.get(key) << " ";
+//             }
+//             std::cout << std::endl;
+//         }
 //     }
 
 //     return 0;
