@@ -91,39 +91,3 @@ void FileUtils::removeStrFromVec(std::vector<std::string>& vec, const std::strin
 {
     vec.erase(std::remove(vec.begin(), vec.end(), value), vec.end());
 }
-
-
-// Uncomment the following for test code
-// int main() {
-//     std::vector<std::string> files = {
-//         "insert_filename.csv",
-//         "insert_filename2.csv"
-//     };
-//     for (const auto& filename : files)
-//     {
-//         std::cout << "\n\nProcessing the following file: " << filename << std::endl;
-
-//         auto csv_data = FileUtils::extractCSV(filename, true);
-        
-//         auto key_list = csv_data[0].listKeys();
-        
-//         // List all keys
-//         for (const auto& key : key_list)
-//         {
-//             std::cout << key << " ";
-//         }
-//         std::cout << std::endl;
-
-//         // Print all keys
-//         for (const auto& row : csv_data)
-//         {
-//             for (const auto& key : key_list)
-//             {
-//                 std::cout << row.get(key) << " ";
-//             }
-//             std::cout << std::endl;
-//         }
-//     }
-
-//     return 0;
-// }
