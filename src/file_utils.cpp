@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2024
  * 
  */
-#include "../include/file_utils.hpp"
+#include "../include/file_utils/file_utils.hpp"
 
 
 std::vector<Dictionary<std::string>> FileUtils::extractCSV(const std::string &filename, bool hasHeader)

@@ -19,7 +19,7 @@
 #include <vector>
 #include <stdexcept>
 
-#include "../include/dictionary.hpp"
+#include "../../include/file_utils/dictionary.hpp"
 
 namespace FileUtils {
     /**

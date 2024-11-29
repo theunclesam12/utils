@@ -64,6 +64,6 @@ public:
     std::vector<std::string> listKeys() const;
 };
 
-#include "../include/dictionary.inl"
+#include "../../include/file_utils/dictionary.inl"
 
 #endif // DICTIONARY_HPP
